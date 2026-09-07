@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Central AG Nalerigu - Tithe</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✝️</div>
+
+    <div>
+        <h1>Central AG</h1>
+        <p>Nalerigu</p>
+    </div>
+</header>
+
+<nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('tithe')">Pay Tithe</button>
+    <button onclick="showPage('history')">History</button>
+    <button onclick="showPage('admin')">Admin</button>
+</nav>
+
+
+<!-- HOME -->
+<section id="home" class="page active">
+
+    <div class="hero">
+        <h2>Welcome to Central Assemblies of God Church</h2>
+
+        <p>
+            Nalerigu, Ghana
+        </p>
+
+        <p>
+            Give faithfully and support the work of God.
+        </p>
+
+        <button class="primary" onclick="showPage('tithe')">
+            Pay Tithe
+        </button>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🙏 Tithe</h3>
+            <p>Give your tithe securely.</p>
+        </div>
+
+        <div class="card">
+            <h3>❤️ Offering</h3>
+            <p>Support the work of the church.</p>
+        </div>
+
+        <div class="card">
+            <h3>📜 History</h3>
+            <p>View your previous payments.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TITHE -->
+<section id="tithe" class="page">
+
+    <div class="form-container">
+
+        <h2>Pay Your Tithe</h2>
+
+        <form id="titheForm">
+
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+
+            <label>Phone Number</label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="0240000000"
+                required
+            >
+
+
+            <label>Amount (GH₵)</label>
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Enter amount"
+                min="1"
+                required
+            >
+
+
+            <label>Month</label>
+
+            <select id="month" required>
+
+                <option value="">Select month</option>
+
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+
+            </select>
+
+
+            <label>Payment Method</label>
+
+            <select id="method" required>
+
+                <option value="">Select payment method</option>
+
+                <option>MTN Mobile Money</option>
+                <option>Telecel Cash</option>
+                <option>Bank Transfer</option>
+
+            </select>
+
+
+            <button type="submit" class="primary">
+                Continue Payment
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- HISTORY -->
+<section id="history" class="page">
+
+    <div class="form-container">
+
+        <h2>Payment History</h2>
+
+        <div id="historyList"></div>
+
+    </div>
+
+</section>
+
+
+<!-- RECEIPT -->
+<section id="receipt" class="page">
+
+    <div class="receipt">
+
+        <h2>Central Assemblies of God Church</h2>
+
+        <p>Nalerigu, Ghana</p>
+
+        <hr>
+
+        <p>
+            <strong>Payment Successful</strong>
+        </p>
+
+        <p>Name:</p>
+        <strong id="receiptName"></strong>
+
+        <p>Phone:</p>
+        <strong id="receiptPhone"></strong>
+
+        <p>Amount:</p>
+        <strong>GH₵ <span id="receiptAmount"></span></strong>
+
+        <p>Month:</p>
+        <strong id="receiptMonth"></strong>
+
+        <p>Payment Method:</p>
+        <strong id="receiptMethod"></strong>
+
+        <p>Reference:</p>
+        <strong id="receiptReference"></strong>
+
+        <p>Date:</p>
+        <strong id="receiptDate"></strong>
+
+        <br>
+
+        <button onclick="window.print()" class="primary">
+            Print Receipt
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ADMIN -->
+<section id="admin" class="page">
+
+    <div class="form-container">
+
+        <h2>Admin Dashboard</h2>
+
+        <div class="dashboard">
+
+            <div class="stat">
+                <h3>Total Payments</h3>
+                <p id="totalPayments">0</p>
+            </div>
+
+            <div class="stat">
+                <h3>Total Tithe</h3>
+                <p>GH₵ <span id="totalAmount">0.00</span></p>
+            </div>
+
+        </div>
+
+        <h3>Transactions</h3>
+
+        <div id="adminTransactions"></div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Central Assemblies of God Church, Nalerigu
+    </p>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

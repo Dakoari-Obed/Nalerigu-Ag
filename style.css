@@ -1,0 +1,21 @@
+*{box-sizing:border-box; font-family: 'Segoe UI', sans-serif}
+body{margin:0; background:#f6f7fb; color:#222}
+header{background:#8b1a1a; color:#fff; display:flex; align-items:center; gap:12px; padding:16px 20px}
+.logo{font-size:32px; background:#fff; color:#8b1a1a; width:50px; height:50px; display:grid; place-items:center; border-radius:50%; font-weight:bold}
+header h1{margin:0; font-size:20px} header p{margin:0; opacity:.9}
+nav{display:flex; gap:8px; padding:10px; background:#fff; position:sticky; top:0; z-index:10; box-shadow:0 2px 10px rgba(0,0,0,.05)}
+nav button{flex:1; padding:10px; border:1px solid #eee; border-radius:8px; background:#fff; cursor:pointer}
+nav button:hover{background:#8b1a1a; color:#fff}
+.page{display:none; padding:20px} .page.active{display:block}
+.hero{background:#fff; padding:30px; border-radius:16px; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,.05)}
+.cards{display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:12px; margin-top:20px}
+.card{background:#fff; padding:18px; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.form-container{background:#fff; max-width:500px; margin:auto; padding:24px; border-radius:16px; box-shadow:0 4px 15px rgba(0,0,0,.05)}
+label{display:block; margin:12px 0 4px; font-weight:600; font-size:14px}
+input,select{width:100%; padding:12px; border-radius:10px; border:1px solid #ddd}
+.primary{width:100%; padding:13px; background:#8b1a1a; color:#fff; border:none; border-radius:10px; font-weight:bold; margin-top:16px; cursor:pointer}
+.receipt{background:#fff; max-width:500px; margin:auto; padding:24px; border-radius:16px; text-align:center; border:2px dashed #8b1a1a}
+.tx{background:#fafafa; padding:12px; border-radius:10px; margin:8px 0; text-align:left; border-left:4px solid #8b1a1a}
+.dashboard{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:15px 0}
+.stat{background:#fff7f7; padding:15px; border-radius:12px; text-align:center}
+footer{text-align:center; padding:30px; color:#999; font-size:13px}
